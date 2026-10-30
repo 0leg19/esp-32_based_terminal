@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, "Noto Sans", "Noto Sans Georgian", "Noto Sans Arabic", "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", "Noto Sans Mono", monospace;
+  --spacing-sidebar: 15.5rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply bg-slate-100 text-[15px] text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  input:not([type="checkbox"], [type="radio"], [type="file"]),
+  select,
+  textarea {
+    @apply w-full min-w-0 rounded-lg border border-slate-300 bg-white px-2.5 py-2 text-sm text-slate-900 placeholder:text-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100;
+  }
+
+  input[type="file"] {
+    @apply text-sm file:me-3 file:rounded-lg file:border file:border-slate-300 file:bg-white file:px-3 file:py-1.5 file:text-sm file:font-medium dark:file:border-slate-700 dark:file:bg-slate-800 dark:file:text-slate-100;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    @apply size-4 accent-cyan-600;
+  }
+
+  textarea {
+    @apply font-mono text-xs;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-1 outline-cyan-500;
+  }
+
+  summary {
+    @apply cursor-pointer font-semibold;
+  }
+}
+
+/* Title-case scripts have no capitals: no upper-casing or tracking there. */
+@custom-variant caps (&:is(:lang(en), :lang(fr), :lang(de), :lang(es)));

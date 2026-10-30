@@ -1,0 +1,4 @@
+node_modules/
+dist/
+# CA / server / OTA private keys and test-server settings
+data/

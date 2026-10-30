@@ -1,0 +1,18 @@
+# Build output
+build/
+*.bin
+*.elf
+*.map
+*.o
+a.out
+tests/*_test
+firmware/tests/*_test
+
+# OTA signing keys — never commit
+*.pem
+*.key
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

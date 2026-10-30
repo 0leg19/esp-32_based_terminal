@@ -1,0 +1,7 @@
+handoff: empty_polls_before_B  conventional_B_processed  uid_aware_B_processed
+  0  0  1
+  1  0  1
+  2  0  1
+  3  1  1
+  4  1  1
+random_steps=8000000 checks=8000016 failures=0
